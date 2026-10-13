@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inventree\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 07:55+0000\n"
-"PO-Revision-Date: 2026-10-09 08:00\n"
+"POT-Creation-Date: 2026-10-13 06:07+0000\n"
+"PO-Revision-Date: 2026-10-13 06:11\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -603,13 +603,13 @@ msgstr "주문 상태"
 msgid "Parent Build"
 msgstr "직상위 빌드"
 
-#: build/api.py:87 build/api.py:1070 order/api.py:541 order/api.py:781
+#: build/api.py:87 build/api.py:1084 order/api.py:541 order/api.py:781
 #: order/api.py:1258 order/api.py:1572 order/api.py:1889 order/api.py:2099
 #: stock/api.py:646
 msgid "Include Variants"
 msgstr "변형(Variant) 포함"
 
-#: build/api.py:103 build/api.py:490 build/api.py:1084 build/models.py:293
+#: build/api.py:103 build/api.py:490 build/api.py:1098 build/models.py:293
 #: build/serializers.py:1207 build/serializers.py:1383
 #: build/serializers.py:1476 company/models.py:1038 company/serializers.py:475
 #: order/api.py:326 order/api.py:330 order/api.py:938 order/api.py:1271
@@ -746,7 +746,7 @@ msgstr "미결 주문"
 msgid "Allocated"
 msgstr "할당됨"
 
-#: build/api.py:530 build/models.py:2236 build/serializers.py:1436
+#: build/api.py:530 build/models.py:2266 build/serializers.py:1436
 msgid "Consumed"
 msgstr "소모됨"
 
@@ -767,14 +767,14 @@ msgstr "주문 중"
 msgid "Build not found"
 msgstr "빌드를 찾을 수 없습니다"
 
-#: build/api.py:1107 build/models.py:130 order/models.py:2389
+#: build/api.py:1121 build/models.py:130 order/models.py:2389
 #: report/templates/report/inventree_build_order_report.html:104
 #: stock/serializers.py:98 templates/email/build_order_completed.html:16
 #: templates/email/overdue_build_order.html:15
 msgid "Build Order"
 msgstr "작업 지시서"
 
-#: build/api.py:1121 build/api.py:1125 build/serializers.py:419
+#: build/api.py:1135 build/api.py:1139 build/serializers.py:419
 #: build/serializers.py:525 build/serializers.py:576 build/serializers.py:1257
 #: build/serializers.py:1263 order/api.py:1318 order/api.py:1323
 #: order/api.py:2151 order/api.py:2156 order/serializers.py:851
@@ -788,11 +788,11 @@ msgstr "작업 지시서"
 msgid "Location"
 msgstr "위치"
 
-#: build/api.py:1133 part/serializers.py:1378
+#: build/api.py:1147 part/serializers.py:1378
 msgid "Output"
 msgstr "산출물"
 
-#: build/api.py:1135
+#: build/api.py:1149
 msgid "Filter by output stock item ID. Use 'null' to find uninstalled build items."
 msgstr "산출물 재고 항목 ID로 필터링합니다. 설치되지 않은 빌드 항목을 찾으려면 'null'을 사용하세요."
 
@@ -996,35 +996,35 @@ msgstr "프로젝트 코드"
 msgid "Project code for this build order"
 msgstr "이 빌드 주문의 프로젝트 코드"
 
-#: build/models.py:998
+#: build/models.py:1028
 msgid "Cannot complete build order with open child builds"
 msgstr "진행 중인 하위 빌드가 있는 상태에서는 작업 지시서를 완료할 수 없습니다"
 
-#: build/models.py:1003
+#: build/models.py:1033
 msgid "Cannot complete build order with incomplete outputs"
 msgstr "미완료 산출물이 있는 상태에서는 작업 지시서를 완료할 수 없습니다"
 
-#: build/models.py:1144
+#: build/models.py:1174
 msgid "Serial numbers must be provided for trackable parts"
 msgstr "추적 가능한 부품에는 시리얼 번호를 제공해야 합니다"
 
-#: build/models.py:1236 build/models.py:1322
+#: build/models.py:1266 build/models.py:1352
 msgid "No build output specified"
 msgstr "생산 완제품이 지정되지 않았습니다"
 
-#: build/models.py:1239
+#: build/models.py:1269
 msgid "Build output is already completed"
 msgstr "생산 완제품이 이미 완료되었습니다"
 
-#: build/models.py:1242 build/models.py:1331 build/models.py:1409
+#: build/models.py:1272 build/models.py:1361 build/models.py:1439
 msgid "Build output does not match Build Order"
 msgstr "생산 완제품이 작업 지시서와 일치하지 않습니다"
 
-#: build/models.py:1328 build/models.py:1406
+#: build/models.py:1358 build/models.py:1436
 msgid "Build output has already been completed"
 msgstr ""
 
-#: build/models.py:1338 build/models.py:1439 build/serializers.py:328
+#: build/models.py:1368 build/models.py:1469 build/serializers.py:328
 #: build/serializers.py:382 build/serializers.py:925 build/serializers.py:1732
 #: order/models.py:820 order/serializers.py:627 order/serializers.py:862
 #: part/models.py:3879 stock/models.py:1079 stock/models.py:1504
@@ -1034,43 +1034,43 @@ msgstr ""
 msgid "Quantity must be greater than zero"
 msgstr "수량은 0보다 커야 합니다"
 
-#: build/models.py:1342 build/models.py:1444 build/serializers.py:333
+#: build/models.py:1372 build/models.py:1474 build/serializers.py:333
 msgid "Quantity cannot be greater than the output quantity"
 msgstr "수량은 산출물 수량보다 클 수 없습니다"
 
-#: build/models.py:1418
+#: build/models.py:1448
 msgid "Build output has not passed all required tests"
 msgstr "생산 완제품이 모든 필수 테스트를 통과하지 못했습니다"
 
-#: build/models.py:1426
+#: build/models.py:1456
 msgid "Allocated stock items are still in production"
 msgstr "할당된 재고 항목이 아직 생산 중입니다"
 
-#: build/models.py:1433
+#: build/models.py:1463
 msgid "Cannot partially complete a build output with allocated items"
 msgstr "할당된 항목이 있는 빌드 산출물은 부분 완료할 수 없습니다"
 
-#: build/models.py:1616 order/models.py:4232 order/serializers.py:1999
+#: build/models.py:1646 order/models.py:4232 order/serializers.py:1999
 #: order/serializers.py:2852 stock/models.py:1494 stock/models.py:1898
 #: stock/models.py:2121 stock/models.py:2444 stock/models.py:2738
 msgid "Stock item no longer exists"
 msgstr ""
 
-#: build/models.py:1634 build/serializers.py:973 order/serializers.py:1777
+#: build/models.py:1664 build/serializers.py:973 order/serializers.py:1777
 #: order/serializers.py:2808
 #, python-brace-format
 msgid "Available quantity ({q}) exceeded"
 msgstr "사용 가능한 수량({q})을 초과했습니다"
 
-#: build/models.py:2190
+#: build/models.py:2220
 msgid "Build Order Line Item"
 msgstr "소요 자재 품목"
 
-#: build/models.py:2215
+#: build/models.py:2245
 msgid "Build object"
 msgstr "빌드 객체"
 
-#: build/models.py:2227 build/models.py:2507 build/serializers.py:314
+#: build/models.py:2257 build/models.py:2537 build/serializers.py:314
 #: build/serializers.py:367 build/serializers.py:1435 common/models.py:1394
 #: order/models.py:2135 order/models.py:3209 order/models.py:4199
 #: order/serializers.py:1886 order/serializers.py:2390
@@ -1094,40 +1094,40 @@ msgstr "빌드 객체"
 msgid "Quantity"
 msgstr "수량"
 
-#: build/models.py:2228
+#: build/models.py:2258
 msgid "Required quantity for build order"
 msgstr "작업 지시서에 필요한 수량"
 
-#: build/models.py:2237
+#: build/models.py:2267
 msgid "Quantity of consumed stock"
 msgstr "소모된 재고 수량"
 
-#: build/models.py:2338
+#: build/models.py:2368
 msgid "Build item must specify a build output, as master part is marked as trackable"
 msgstr "마스터 부품이 추적 가능으로 표시되어 있으므로, 빌드 항목은 생산 완제품을 지정해야 합니다"
 
-#: build/models.py:2401 build/serializers.py:956
+#: build/models.py:2431 build/serializers.py:956
 msgid "Selected stock item does not match BOM line"
 msgstr "선택한 재고 항목이 BOM 라인과 일치하지 않습니다"
 
-#: build/models.py:2420
+#: build/models.py:2450
 msgid "Allocated quantity must be greater than zero"
 msgstr "할당 수량은 0보다 커야 합니다"
 
-#: build/models.py:2426
+#: build/models.py:2456
 msgid "Quantity must be 1 for serialized stock"
 msgstr "시리얼이 있는 재고의 수량은 1이어야 합니다"
 
-#: build/models.py:2436
+#: build/models.py:2466
 #, python-brace-format
 msgid "Allocated quantity ({q}) must not exceed available stock quantity ({a})"
 msgstr "할당 수량({q})은 사용 가능한 재고 수량({a})을 초과할 수 없습니다"
 
-#: build/models.py:2453 order/models.py:3158 order/models.py:4163
+#: build/models.py:2483 order/models.py:3158 order/models.py:4163
 msgid "Stock item is over-allocated"
 msgstr "재고 항목이 과다 할당되었습니다"
 
-#: build/models.py:2497 build/serializers.py:908 build/serializers.py:1224
+#: build/models.py:2527 build/serializers.py:908 build/serializers.py:1224
 #: order/serializers.py:1714 order/serializers.py:1735
 #: order/serializers.py:2754 order/serializers.py:2775
 #: report/templates/report/inventree_sales_order_shipment_report.html:28
@@ -1136,19 +1136,19 @@ msgstr "재고 항목이 과다 할당되었습니다"
 msgid "Stock Item"
 msgstr "재고 항목"
 
-#: build/models.py:2498
+#: build/models.py:2528
 msgid "Source stock item"
 msgstr "원본 재고 항목"
 
-#: build/models.py:2508
+#: build/models.py:2538
 msgid "Stock quantity to allocate to build"
 msgstr "빌드에 할당할 재고 수량"
 
-#: build/models.py:2517
+#: build/models.py:2547
 msgid "Install into"
 msgstr "설치 대상"
 
-#: build/models.py:2518
+#: build/models.py:2548
 msgid "Destination stock item"
 msgstr "대상 재고 항목"
 
@@ -1575,29 +1575,29 @@ msgstr "취소됨"
 msgid "Complete"
 msgstr "완료"
 
-#: build/tasks.py:370
+#: build/tasks.py:381
 #, python-brace-format
 msgid "Build order {build} has been completed"
 msgstr "작업 지시서 {build}이(가) 완료되었습니다"
 
-#: build/tasks.py:376
+#: build/tasks.py:387
 msgid "A build order has been completed"
 msgstr "작업 지시서가 완료되었습니다"
 
-#: build/tasks.py:507
+#: build/tasks.py:518
 msgid "Stock required for build order"
 msgstr "빌드 주문에 재고가 필요합니다"
 
-#: build/tasks.py:517
+#: build/tasks.py:528
 #, python-brace-format
 msgid "Build order {build} requires additional stock"
 msgstr "빌드 주문 {build}에 추가 재고가 필요합니다"
 
-#: build/tasks.py:541
+#: build/tasks.py:552
 msgid "Overdue Build Order"
 msgstr "기한 초과 빌드 주문"
 
-#: build/tasks.py:546
+#: build/tasks.py:557
 #, python-brace-format
 msgid "Build order {bo} is now overdue"
 msgstr "빌드 주문 {bo}이(가) 기한을 초과했습니다"
@@ -1746,7 +1746,7 @@ msgstr "프로젝트 설명"
 #: common/models.py:2609 company/models.py:194 company/models.py:787
 #: machine/models.py:43 part/models.py:1310 plugin/models.py:69
 #: stock/api.py:715 users/models.py:381 users/models.py:749
-#: users/serializers.py:360 users/serializers.py:481
+#: users/serializers.py:364 users/serializers.py:485
 msgid "Active"
 msgstr "활성"
 
@@ -4404,66 +4404,74 @@ msgid "Show the current page in breadcrumbs"
 msgstr "탐색 경로(브레드크럼)에서 현재 페이지를 표시"
 
 #: common/setting/user.py:259
+msgid "Pin Navigation Tree"
+msgstr ""
+
+#: common/setting/user.py:260
+msgid "Display navigation tree permanently"
+msgstr ""
+
+#: common/setting/user.py:265
 msgid "Show Extra Model Information"
 msgstr "추가 모델 정보 표시"
 
-#: common/setting/user.py:260
+#: common/setting/user.py:266
 msgid "Display extra information in model selection dropdowns"
 msgstr "모델 선택 드롭다운에 추가 정보 표시"
 
-#: common/setting/user.py:265
+#: common/setting/user.py:271
 msgid "Show full stock location in tables"
 msgstr "테이블에서 전체 재고 위치 표시"
 
-#: common/setting/user.py:267
+#: common/setting/user.py:273
 msgid "Disabled: The full location path is displayed as a hover tooltip. Enabled: The full location path is displayed as plain text."
 msgstr "비활성화: 전체 위치 경로를 마우스오버 툴팁으로 표시합니다. 활성화: 전체 위치 경로를 일반 텍스트로 표시합니다."
 
-#: common/setting/user.py:273
+#: common/setting/user.py:279
 msgid "Show full part categories in tables"
 msgstr "테이블에서 전체 부품 카테고리 표시"
 
-#: common/setting/user.py:275
+#: common/setting/user.py:281
 msgid "Disabled: The full category path is displayed as a hover tooltip. Enabled: The full category path is displayed as plain text."
 msgstr "비활성화: 전체 카테고리 경로를 마우스오버 툴팁으로 표시합니다. 활성화: 전체 카테고리 경로를 일반 텍스트로 표시합니다."
 
-#: common/setting/user.py:281
+#: common/setting/user.py:287
 msgid "Show Subassemblies in BOM table"
 msgstr "BOM 테이블에 하위 조립품 표시"
 
-#: common/setting/user.py:282
+#: common/setting/user.py:288
 msgid "Enable display of subassemblies in the BOM table"
 msgstr "BOM 테이블에서 하위 조립품 표시 사용"
 
-#: common/setting/user.py:287
+#: common/setting/user.py:293
 msgid "Receive error reports"
 msgstr "오류 보고서 수신"
 
-#: common/setting/user.py:288
+#: common/setting/user.py:294
 msgid "Receive notifications for system errors"
 msgstr "시스템 오류에 대한 알림을 수신"
 
-#: common/setting/user.py:293
+#: common/setting/user.py:299
 msgid "Last used printing machines"
 msgstr "마지막으로 사용한 인쇄 장비"
 
-#: common/setting/user.py:294
+#: common/setting/user.py:300
 msgid "Save the last used printing machines for a user"
 msgstr "사용자의 마지막 사용 인쇄 장비를 저장"
 
-#: common/setting/user.py:298
+#: common/setting/user.py:304
 msgid "Display Items at Final Level"
 msgstr "최종 단계에서 항목 표시"
 
-#: common/setting/user.py:300
+#: common/setting/user.py:306
 msgid "Automatically default to showing items/parts instead of sub-levels for locations or categories with no children"
 msgstr "하위 항목이 없는 위치 또는 카테고리에서 하위 레벨 대신 항목/부품을 기본으로 표시"
 
-#: common/setting/user.py:306
+#: common/setting/user.py:312
 msgid "Enable Filtered Detail Navigation"
 msgstr ""
 
-#: common/setting/user.py:308
+#: common/setting/user.py:314
 msgid "Enable persisting of filtered detail navigation parameters to the view url"
 msgstr ""
 
@@ -5197,7 +5205,7 @@ msgstr "각 라벨에 대해 인쇄할 복사본 수"
 msgid "Connected"
 msgstr "연결됨"
 
-#: machine/machine_types/label_printer.py:236 order/api.py:2529
+#: machine/machine_types/label_printer.py:236 order/api.py:2527
 msgid "Unknown"
 msgstr "알 수 없음"
 
@@ -5444,14 +5452,14 @@ msgstr ""
 msgid "Transfer order not found"
 msgstr ""
 
-#: order/api.py:2521 order/models.py:657 order/models.py:2338
+#: order/api.py:2519 order/models.py:657 order/models.py:2338
 #: order/models.py:2464
 #: report/templates/report/inventree_purchase_order_report.html:13
 #: stock/serializers.py:134 templates/email/overdue_purchase_order.html:15
 msgid "Purchase Order"
 msgstr "구매 주문"
 
-#: order/api.py:2523 order/models.py:1397 order/models.py:2516
+#: order/api.py:2521 order/models.py:1397 order/models.py:2516
 #: order/models.py:2697 order/models.py:3086
 #: report/templates/report/inventree_build_order_report.html:134
 #: report/templates/report/inventree_sales_order_report.html:13
@@ -5460,14 +5468,14 @@ msgstr "구매 주문"
 msgid "Sales Order"
 msgstr "판매 주문"
 
-#: order/api.py:2525 order/models.py:3252 order/models.py:3604
+#: order/api.py:2523 order/models.py:3252 order/models.py:3604
 #: order/models.py:3670
 #: report/templates/report/inventree_return_order_report.html:12
 #: templates/email/overdue_return_order.html:15
 msgid "Return Order"
 msgstr "반품 주문"
 
-#: order/api.py:2527 order/models.py:3692 order/models.py:4037
+#: order/api.py:2525 order/models.py:3692 order/models.py:4037
 #: report/templates/report/inventree_transfer_order_report.html:11
 msgid "Transfer Order"
 msgstr "전송 주문"
@@ -8588,17 +8596,17 @@ msgstr "플러그인"
 msgid "No author found"
 msgstr "작성자를 찾을 수 없습니다"
 
-#: plugin/registry.py:869
+#: plugin/registry.py:875
 #, python-brace-format
 msgid "Plugin '{p}' is not compatible with the current InvenTree version {v}"
 msgstr "플러그인 '{p}'은(는) 현재 InvenTree 버전 {v}와 호환되지 않습니다"
 
-#: plugin/registry.py:872
+#: plugin/registry.py:878
 #, python-brace-format
 msgid "Plugin requires at least version {v}"
 msgstr "플러그인은 최소 버전 {v}가 필요합니다"
 
-#: plugin/registry.py:874
+#: plugin/registry.py:880
 #, python-brace-format
 msgid "Plugin requires at most version {v}"
 msgstr "플러그인은 최대 버전 {v}까지 지원합니다"
@@ -9157,31 +9165,31 @@ msgstr "결과 없음"
 msgid "Transferred"
 msgstr "이동됨"
 
-#: report/templatetags/report.py:252
+#: report/templatetags/report.py:254
 msgid "Invalid media file path"
 msgstr "잘못된 미디어 파일 경로"
 
-#: report/templatetags/report.py:271
+#: report/templatetags/report.py:273
 msgid "Invalid static file path"
 msgstr "잘못된 정적 파일 경로"
 
-#: report/templatetags/report.py:373
+#: report/templatetags/report.py:375
 msgid "Asset file not found"
 msgstr "자산 파일을 찾을 수 없습니다"
 
-#: report/templatetags/report.py:434 report/templatetags/report.py:560
+#: report/templatetags/report.py:436 report/templatetags/report.py:562
 msgid "Image file not found"
 msgstr "이미지 파일을 찾을 수 없습니다"
 
-#: report/templatetags/report.py:524
+#: report/templatetags/report.py:526
 msgid "No image file specified"
 msgstr "이미지 파일이 지정되지 않았습니다"
 
-#: report/templatetags/report.py:554
+#: report/templatetags/report.py:556
 msgid "part_image tag requires a Part instance"
 msgstr "part_image 태그에는 Part 인스턴스가 필요합니다"
 
-#: report/templatetags/report.py:734
+#: report/templatetags/report.py:736
 msgid "company_image tag requires a Company instance"
 msgstr "company_image 태그에는 Company 인스턴스가 필요합니다"
 
@@ -10410,23 +10418,23 @@ msgstr "만료까지 남은 일수"
 msgid "You are receiving this email because you are subscribed to notifications for these parts"
 msgstr "이 부품들에 대한 알림을 구독하고 있어 이 이메일을 받고 있습니다"
 
-#: users/admin.py:109
+#: users/admin.py:112
 msgid "Users"
 msgstr "사용자"
 
-#: users/admin.py:110
+#: users/admin.py:113
 msgid "Select which users are assigned to this group"
 msgstr "이 그룹에 할당할 사용자를 선택하세요"
 
-#: users/admin.py:144
+#: users/admin.py:147
 msgid "Personal info"
 msgstr "개인 정보"
 
-#: users/admin.py:146
+#: users/admin.py:149
 msgid "Permissions"
 msgstr "권한"
 
-#: users/admin.py:149
+#: users/admin.py:152
 msgid "Important dates"
 msgstr "중요 날짜"
 
@@ -10698,67 +10706,67 @@ msgstr "사용자가 인증되어야 합니다"
 msgid "Only a superuser can create a token for another user"
 msgstr "슈퍼유저만 다른 사용자의 토큰을 만들 수 있습니다"
 
-#: users/serializers.py:350
+#: users/serializers.py:354
 msgid "Administrator"
 msgstr "관리자"
 
-#: users/serializers.py:351
+#: users/serializers.py:355
 msgid "Does this user have administrative permissions"
 msgstr "이 사용자에게 관리자 권한이 있습니까"
 
-#: users/serializers.py:356 users/serializers.py:474
+#: users/serializers.py:360 users/serializers.py:478
 msgid "Superuser"
 msgstr "슈퍼유저"
 
-#: users/serializers.py:356 users/serializers.py:475
+#: users/serializers.py:360 users/serializers.py:479
 msgid "Is this user a superuser"
 msgstr "이 사용자는 슈퍼유저입니까"
 
-#: users/serializers.py:360 users/serializers.py:482
+#: users/serializers.py:364 users/serializers.py:486
 msgid "Is this user account active"
 msgstr "이 사용자 계정이 활성 상태입니까"
 
-#: users/serializers.py:372
+#: users/serializers.py:376
 msgid "Only a superuser can adjust this field"
 msgstr "슈퍼유저만 이 필드를 조정할 수 있습니다"
 
-#: users/serializers.py:400
+#: users/serializers.py:404
 msgid "Password"
 msgstr "비밀번호"
 
-#: users/serializers.py:401
+#: users/serializers.py:405
 msgid "Password for the user"
 msgstr "사용자의 비밀번호"
 
-#: users/serializers.py:407
+#: users/serializers.py:411
 msgid "Override warning"
 msgstr "경고 무시"
 
-#: users/serializers.py:408
+#: users/serializers.py:412
 msgid "Override the warning about password rules"
 msgstr "비밀번호 규칙에 대한 경고를 무시합니다"
 
-#: users/serializers.py:467
+#: users/serializers.py:471
 msgid "Staff"
 msgstr "스태프"
 
-#: users/serializers.py:468
+#: users/serializers.py:472
 msgid "Does this user have staff permissions"
 msgstr "이 사용자에게 스태프 권한이 있습니까"
 
-#: users/serializers.py:518
+#: users/serializers.py:522
 msgid "You do not have permission to create users"
 msgstr "사용자를 생성할 권한이 없습니다"
 
-#: users/serializers.py:553
+#: users/serializers.py:557
 msgid "Your account has been created."
 msgstr "계정이 생성되었습니다."
 
-#: users/serializers.py:555
+#: users/serializers.py:559
 msgid "Please use the password reset function to login"
 msgstr "로그인하려면 비밀번호 재설정 기능을 사용하세요"
 
-#: users/serializers.py:561
+#: users/serializers.py:565
 msgid "Welcome to InvenTree"
 msgstr "InvenTree에 오신 것을 환영합니다"
 

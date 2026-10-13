@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inventree\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 07:55+0000\n"
-"PO-Revision-Date: 2026-10-09 08:00\n"
+"POT-Creation-Date: 2026-10-13 06:07+0000\n"
+"PO-Revision-Date: 2026-10-13 06:11\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -603,13 +603,13 @@ msgstr "订单状态"
 msgid "Parent Build"
 msgstr "父级生产订单"
 
-#: build/api.py:87 build/api.py:1070 order/api.py:541 order/api.py:781
+#: build/api.py:87 build/api.py:1084 order/api.py:541 order/api.py:781
 #: order/api.py:1258 order/api.py:1572 order/api.py:1889 order/api.py:2099
 #: stock/api.py:646
 msgid "Include Variants"
 msgstr "包含变体"
 
-#: build/api.py:103 build/api.py:490 build/api.py:1084 build/models.py:293
+#: build/api.py:103 build/api.py:490 build/api.py:1098 build/models.py:293
 #: build/serializers.py:1207 build/serializers.py:1383
 #: build/serializers.py:1476 company/models.py:1038 company/serializers.py:475
 #: order/api.py:326 order/api.py:330 order/api.py:938 order/api.py:1271
@@ -746,7 +746,7 @@ msgstr "未结算订单"
 msgid "Allocated"
 msgstr "已分配"
 
-#: build/api.py:530 build/models.py:2236 build/serializers.py:1436
+#: build/api.py:530 build/models.py:2266 build/serializers.py:1436
 msgid "Consumed"
 msgstr "已消耗"
 
@@ -767,14 +767,14 @@ msgstr "已订购"
 msgid "Build not found"
 msgstr "未找到版本"
 
-#: build/api.py:1107 build/models.py:130 order/models.py:2389
+#: build/api.py:1121 build/models.py:130 order/models.py:2389
 #: report/templates/report/inventree_build_order_report.html:104
 #: stock/serializers.py:98 templates/email/build_order_completed.html:16
 #: templates/email/overdue_build_order.html:15
 msgid "Build Order"
 msgstr "生产订单"
 
-#: build/api.py:1121 build/api.py:1125 build/serializers.py:419
+#: build/api.py:1135 build/api.py:1139 build/serializers.py:419
 #: build/serializers.py:525 build/serializers.py:576 build/serializers.py:1257
 #: build/serializers.py:1263 order/api.py:1318 order/api.py:1323
 #: order/api.py:2151 order/api.py:2156 order/serializers.py:851
@@ -788,11 +788,11 @@ msgstr "生产订单"
 msgid "Location"
 msgstr "库存位置"
 
-#: build/api.py:1133 part/serializers.py:1378
+#: build/api.py:1147 part/serializers.py:1378
 msgid "Output"
 msgstr "产出"
 
-#: build/api.py:1135
+#: build/api.py:1149
 msgid "Filter by output stock item ID. Use 'null' to find uninstalled build items."
 msgstr "按产出库存项ID筛选，使用“null”查找未安装的生产项。"
 
@@ -996,35 +996,35 @@ msgstr "项目编号"
 msgid "Project code for this build order"
 msgstr "该生产订单归属的项目编号"
 
-#: build/models.py:998
+#: build/models.py:1028
 msgid "Cannot complete build order with open child builds"
 msgstr "无法完成生产订单，存在未关闭的子生产订单"
 
-#: build/models.py:1003
+#: build/models.py:1033
 msgid "Cannot complete build order with incomplete outputs"
 msgstr "无法完成生产订单，存在未完成的产出项"
 
-#: build/models.py:1144
+#: build/models.py:1174
 msgid "Serial numbers must be provided for trackable parts"
 msgstr "可追溯零件必须填写序列号"
 
-#: build/models.py:1236 build/models.py:1322
+#: build/models.py:1266 build/models.py:1352
 msgid "No build output specified"
 msgstr "未指定产出"
 
-#: build/models.py:1239
+#: build/models.py:1269
 msgid "Build output is already completed"
 msgstr "产出已完成"
 
-#: build/models.py:1242 build/models.py:1331 build/models.py:1409
+#: build/models.py:1272 build/models.py:1361 build/models.py:1439
 msgid "Build output does not match Build Order"
 msgstr "产出与生产订单不匹配"
 
-#: build/models.py:1328 build/models.py:1406
+#: build/models.py:1358 build/models.py:1436
 msgid "Build output has already been completed"
 msgstr "构建输出已完成"
 
-#: build/models.py:1338 build/models.py:1439 build/serializers.py:328
+#: build/models.py:1368 build/models.py:1469 build/serializers.py:328
 #: build/serializers.py:382 build/serializers.py:925 build/serializers.py:1732
 #: order/models.py:820 order/serializers.py:627 order/serializers.py:862
 #: part/models.py:3879 stock/models.py:1079 stock/models.py:1504
@@ -1034,43 +1034,43 @@ msgstr "构建输出已完成"
 msgid "Quantity must be greater than zero"
 msgstr "数量必须大于零"
 
-#: build/models.py:1342 build/models.py:1444 build/serializers.py:333
+#: build/models.py:1372 build/models.py:1474 build/serializers.py:333
 msgid "Quantity cannot be greater than the output quantity"
 msgstr "数量不能大于产出数量"
 
-#: build/models.py:1418
+#: build/models.py:1448
 msgid "Build output has not passed all required tests"
 msgstr "产出未通过所有必要测试"
 
-#: build/models.py:1426
+#: build/models.py:1456
 msgid "Allocated stock items are still in production"
 msgstr "已分配的库存物料仍在生产中"
 
-#: build/models.py:1433
+#: build/models.py:1463
 msgid "Cannot partially complete a build output with allocated items"
 msgstr "存在已分配物料时无法部分完成生产输出"
 
-#: build/models.py:1616 order/models.py:4232 order/serializers.py:1999
+#: build/models.py:1646 order/models.py:4232 order/serializers.py:1999
 #: order/serializers.py:2852 stock/models.py:1494 stock/models.py:1898
 #: stock/models.py:2121 stock/models.py:2444 stock/models.py:2738
 msgid "Stock item no longer exists"
 msgstr "库存项目已不存在"
 
-#: build/models.py:1634 build/serializers.py:973 order/serializers.py:1777
+#: build/models.py:1664 build/serializers.py:973 order/serializers.py:1777
 #: order/serializers.py:2808
 #, python-brace-format
 msgid "Available quantity ({q}) exceeded"
 msgstr "可用量 ({q}) 超出限制"
 
-#: build/models.py:2190
+#: build/models.py:2220
 msgid "Build Order Line Item"
 msgstr "生产订单行项目"
 
-#: build/models.py:2215
+#: build/models.py:2245
 msgid "Build object"
 msgstr "生产对象"
 
-#: build/models.py:2227 build/models.py:2507 build/serializers.py:314
+#: build/models.py:2257 build/models.py:2537 build/serializers.py:314
 #: build/serializers.py:367 build/serializers.py:1435 common/models.py:1394
 #: order/models.py:2135 order/models.py:3209 order/models.py:4199
 #: order/serializers.py:1886 order/serializers.py:2390
@@ -1094,40 +1094,40 @@ msgstr "生产对象"
 msgid "Quantity"
 msgstr "数量"
 
-#: build/models.py:2228
+#: build/models.py:2258
 msgid "Required quantity for build order"
 msgstr "生产订单所需数量"
 
-#: build/models.py:2237
+#: build/models.py:2267
 msgid "Quantity of consumed stock"
 msgstr "库存消耗量"
 
-#: build/models.py:2338
+#: build/models.py:2368
 msgid "Build item must specify a build output, as master part is marked as trackable"
 msgstr "生产项必须指定产出，因为主零件已经被标记为可追踪的"
 
-#: build/models.py:2401 build/serializers.py:956
+#: build/models.py:2431 build/serializers.py:956
 msgid "Selected stock item does not match BOM line"
 msgstr "所选库存项与物料清单行项不匹配"
 
-#: build/models.py:2420
+#: build/models.py:2450
 msgid "Allocated quantity must be greater than zero"
 msgstr "分配的数量必须大于零"
 
-#: build/models.py:2426
+#: build/models.py:2456
 msgid "Quantity must be 1 for serialized stock"
 msgstr "序列化物料的数量必须为1"
 
-#: build/models.py:2436
+#: build/models.py:2466
 #, python-brace-format
 msgid "Allocated quantity ({q}) must not exceed available stock quantity ({a})"
 msgstr "分配数量 ({q}) 不得超过可用库存数量 ({a})"
 
-#: build/models.py:2453 order/models.py:3158 order/models.py:4163
+#: build/models.py:2483 order/models.py:3158 order/models.py:4163
 msgid "Stock item is over-allocated"
 msgstr "库存品项超额分配"
 
-#: build/models.py:2497 build/serializers.py:908 build/serializers.py:1224
+#: build/models.py:2527 build/serializers.py:908 build/serializers.py:1224
 #: order/serializers.py:1714 order/serializers.py:1735
 #: order/serializers.py:2754 order/serializers.py:2775
 #: report/templates/report/inventree_sales_order_shipment_report.html:28
@@ -1136,19 +1136,19 @@ msgstr "库存品项超额分配"
 msgid "Stock Item"
 msgstr "库存项"
 
-#: build/models.py:2498
+#: build/models.py:2528
 msgid "Source stock item"
 msgstr "源库存项"
 
-#: build/models.py:2508
+#: build/models.py:2538
 msgid "Stock quantity to allocate to build"
 msgstr "分配给该生产任务的库存量"
 
-#: build/models.py:2517
+#: build/models.py:2547
 msgid "Install into"
 msgstr "安裝到"
 
-#: build/models.py:2518
+#: build/models.py:2548
 msgid "Destination stock item"
 msgstr "目标库存项"
 
@@ -1575,29 +1575,29 @@ msgstr "已取消"
 msgid "Complete"
 msgstr "完成"
 
-#: build/tasks.py:370
+#: build/tasks.py:381
 #, python-brace-format
 msgid "Build order {build} has been completed"
 msgstr "生产订单 {build} 已完成"
 
-#: build/tasks.py:376
+#: build/tasks.py:387
 msgid "A build order has been completed"
 msgstr "生产订单已完成"
 
-#: build/tasks.py:507
+#: build/tasks.py:518
 msgid "Stock required for build order"
 msgstr "生产订单所需库存"
 
-#: build/tasks.py:517
+#: build/tasks.py:528
 #, python-brace-format
 msgid "Build order {build} requires additional stock"
 msgstr "生产订单{build}需补充库存"
 
-#: build/tasks.py:541
+#: build/tasks.py:552
 msgid "Overdue Build Order"
 msgstr "逾期的生产订单"
 
-#: build/tasks.py:546
+#: build/tasks.py:557
 #, python-brace-format
 msgid "Build order {bo} is now overdue"
 msgstr "生产订单 {bo} 现已逾期"
@@ -1746,7 +1746,7 @@ msgstr "项目描述"
 #: common/models.py:2609 company/models.py:194 company/models.py:787
 #: machine/models.py:43 part/models.py:1310 plugin/models.py:69
 #: stock/api.py:715 users/models.py:381 users/models.py:749
-#: users/serializers.py:360 users/serializers.py:481
+#: users/serializers.py:364 users/serializers.py:485
 msgid "Active"
 msgstr "激活"
 
@@ -4404,68 +4404,76 @@ msgid "Show the current page in breadcrumbs"
 msgstr "在导航栏中显示当前页面"
 
 #: common/setting/user.py:259
+msgid "Pin Navigation Tree"
+msgstr ""
+
+#: common/setting/user.py:260
+msgid "Display navigation tree permanently"
+msgstr ""
+
+#: common/setting/user.py:265
 msgid "Show Extra Model Information"
 msgstr "显示模型扩展信息"
 
-#: common/setting/user.py:260
+#: common/setting/user.py:266
 msgid "Display extra information in model selection dropdowns"
 msgstr "在模型选择下拉框中展示扩展附加信息"
 
-#: common/setting/user.py:265
+#: common/setting/user.py:271
 msgid "Show full stock location in tables"
 msgstr "在表格中显示完整库存位置信息"
 
-#: common/setting/user.py:267
+#: common/setting/user.py:273
 msgid "Disabled: The full location path is displayed as a hover tooltip. Enabled: The full location path is displayed as plain text."
 msgstr "禁用时：完整路径以悬停提示框形式显示。\n"
 "启用时：完整路径以纯文本形式显示。"
 
-#: common/setting/user.py:273
+#: common/setting/user.py:279
 msgid "Show full part categories in tables"
 msgstr "在表格中显示完整的零件类别"
 
-#: common/setting/user.py:275
+#: common/setting/user.py:281
 msgid "Disabled: The full category path is displayed as a hover tooltip. Enabled: The full category path is displayed as plain text."
 msgstr "禁用时：完整分类路径以悬停提示框形式显示。\n"
 "启用时：完整分类路径以纯文本形式显示。"
 
-#: common/setting/user.py:281
+#: common/setting/user.py:287
 msgid "Show Subassemblies in BOM table"
 msgstr "在物料清单表中显示子装配"
 
-#: common/setting/user.py:282
+#: common/setting/user.py:288
 msgid "Enable display of subassemblies in the BOM table"
 msgstr "启用物料清单表中的子装配显示"
 
-#: common/setting/user.py:287
+#: common/setting/user.py:293
 msgid "Receive error reports"
 msgstr "接收错误报告"
 
-#: common/setting/user.py:288
+#: common/setting/user.py:294
 msgid "Receive notifications for system errors"
 msgstr "接收系统错误通知"
 
-#: common/setting/user.py:293
+#: common/setting/user.py:299
 msgid "Last used printing machines"
 msgstr "上次使用的打印设备"
 
-#: common/setting/user.py:294
+#: common/setting/user.py:300
 msgid "Save the last used printing machines for a user"
 msgstr "为用户保存上次使用的打印设备"
 
-#: common/setting/user.py:298
+#: common/setting/user.py:304
 msgid "Display Items at Final Level"
 msgstr "最终级别的展示项目"
 
-#: common/setting/user.py:300
+#: common/setting/user.py:306
 msgid "Automatically default to showing items/parts instead of sub-levels for locations or categories with no children"
 msgstr "对于没有子项的位置或类别，自动默认显示项目/零件，而不是子级别"
 
-#: common/setting/user.py:306
+#: common/setting/user.py:312
 msgid "Enable Filtered Detail Navigation"
 msgstr "启用筛选的详细导航"
 
-#: common/setting/user.py:308
+#: common/setting/user.py:314
 msgid "Enable persisting of filtered detail navigation parameters to the view url"
 msgstr "启用筛选详细导航参数到视图 url"
 
@@ -5199,7 +5207,7 @@ msgstr "每个标签要打印的份数"
 msgid "Connected"
 msgstr "已连接"
 
-#: machine/machine_types/label_printer.py:236 order/api.py:2529
+#: machine/machine_types/label_printer.py:236 order/api.py:2527
 msgid "Unknown"
 msgstr "未知"
 
@@ -5446,14 +5454,14 @@ msgstr "未找到退货订单"
 msgid "Transfer order not found"
 msgstr "未找到调拨单"
 
-#: order/api.py:2521 order/models.py:657 order/models.py:2338
+#: order/api.py:2519 order/models.py:657 order/models.py:2338
 #: order/models.py:2464
 #: report/templates/report/inventree_purchase_order_report.html:13
 #: stock/serializers.py:134 templates/email/overdue_purchase_order.html:15
 msgid "Purchase Order"
 msgstr "采购订单"
 
-#: order/api.py:2523 order/models.py:1397 order/models.py:2516
+#: order/api.py:2521 order/models.py:1397 order/models.py:2516
 #: order/models.py:2697 order/models.py:3086
 #: report/templates/report/inventree_build_order_report.html:134
 #: report/templates/report/inventree_sales_order_report.html:13
@@ -5462,14 +5470,14 @@ msgstr "采购订单"
 msgid "Sales Order"
 msgstr "销售订单"
 
-#: order/api.py:2525 order/models.py:3252 order/models.py:3604
+#: order/api.py:2523 order/models.py:3252 order/models.py:3604
 #: order/models.py:3670
 #: report/templates/report/inventree_return_order_report.html:12
 #: templates/email/overdue_return_order.html:15
 msgid "Return Order"
 msgstr "退货订单"
 
-#: order/api.py:2527 order/models.py:3692 order/models.py:4037
+#: order/api.py:2525 order/models.py:3692 order/models.py:4037
 #: report/templates/report/inventree_transfer_order_report.html:11
 msgid "Transfer Order"
 msgstr "调拨单"
@@ -8590,17 +8598,17 @@ msgstr "插件"
 msgid "No author found"
 msgstr "未找到作者"
 
-#: plugin/registry.py:869
+#: plugin/registry.py:875
 #, python-brace-format
 msgid "Plugin '{p}' is not compatible with the current InvenTree version {v}"
 msgstr "插件 '{p}' 与当前 InvenTree 版本{v} 不兼容"
 
-#: plugin/registry.py:872
+#: plugin/registry.py:878
 #, python-brace-format
 msgid "Plugin requires at least version {v}"
 msgstr "插件所需最低版本 {v}"
 
-#: plugin/registry.py:874
+#: plugin/registry.py:880
 #, python-brace-format
 msgid "Plugin requires at most version {v}"
 msgstr "插件所需最高版本 {v}"
@@ -9159,31 +9167,31 @@ msgstr "没有结果"
 msgid "Transferred"
 msgstr "已调拨"
 
-#: report/templatetags/report.py:252
+#: report/templatetags/report.py:254
 msgid "Invalid media file path"
 msgstr "无效的媒体文件路径"
 
-#: report/templatetags/report.py:271
+#: report/templatetags/report.py:273
 msgid "Invalid static file path"
 msgstr "无效的静态文件路径"
 
-#: report/templatetags/report.py:373
+#: report/templatetags/report.py:375
 msgid "Asset file not found"
 msgstr "未找到资源文件"
 
-#: report/templatetags/report.py:434 report/templatetags/report.py:560
+#: report/templatetags/report.py:436 report/templatetags/report.py:562
 msgid "Image file not found"
 msgstr "找不到图片文件"
 
-#: report/templatetags/report.py:524
+#: report/templatetags/report.py:526
 msgid "No image file specified"
 msgstr "未指定图片文件"
 
-#: report/templatetags/report.py:554
+#: report/templatetags/report.py:556
 msgid "part_image tag requires a Part instance"
 msgstr "parpart_image 标签需要一个零件实例"
 
-#: report/templatetags/report.py:734
+#: report/templatetags/report.py:736
 msgid "company_image tag requires a Company instance"
 msgstr "公司_图片标签需要一个公司实例"
 
@@ -10412,23 +10420,23 @@ msgstr "距离到期天数"
 msgid "You are receiving this email because you are subscribed to notifications for these parts"
 msgstr "您收到此邮件是因为您订阅了这些零件的通知"
 
-#: users/admin.py:109
+#: users/admin.py:112
 msgid "Users"
 msgstr "用户"
 
-#: users/admin.py:110
+#: users/admin.py:113
 msgid "Select which users are assigned to this group"
 msgstr "选择分配给此组的用户"
 
-#: users/admin.py:144
+#: users/admin.py:147
 msgid "Personal info"
 msgstr "个人信息"
 
-#: users/admin.py:146
+#: users/admin.py:149
 msgid "Permissions"
 msgstr "权限"
 
-#: users/admin.py:149
+#: users/admin.py:152
 msgid "Important dates"
 msgstr "重要日期"
 
@@ -10700,67 +10708,67 @@ msgstr "用户必须经过身份验证"
 msgid "Only a superuser can create a token for another user"
 msgstr "只有超级用户可以为另一个用户创建令牌"
 
-#: users/serializers.py:350
+#: users/serializers.py:354
 msgid "Administrator"
 msgstr "管理员"
 
-#: users/serializers.py:351
+#: users/serializers.py:355
 msgid "Does this user have administrative permissions"
 msgstr "该用户是否拥有管理员权限"
 
-#: users/serializers.py:356 users/serializers.py:474
+#: users/serializers.py:360 users/serializers.py:478
 msgid "Superuser"
 msgstr "超级用户"
 
-#: users/serializers.py:356 users/serializers.py:475
+#: users/serializers.py:360 users/serializers.py:479
 msgid "Is this user a superuser"
 msgstr "此用户是否为超级用户"
 
-#: users/serializers.py:360 users/serializers.py:482
+#: users/serializers.py:364 users/serializers.py:486
 msgid "Is this user account active"
 msgstr "此用户帐户是否已激活"
 
-#: users/serializers.py:372
+#: users/serializers.py:376
 msgid "Only a superuser can adjust this field"
 msgstr "只有超级用户可以调整此字段"
 
-#: users/serializers.py:400
+#: users/serializers.py:404
 msgid "Password"
 msgstr "密码"
 
-#: users/serializers.py:401
+#: users/serializers.py:405
 msgid "Password for the user"
 msgstr "用户密码"
 
-#: users/serializers.py:407
+#: users/serializers.py:411
 msgid "Override warning"
 msgstr "覆盖警告"
 
-#: users/serializers.py:408
+#: users/serializers.py:412
 msgid "Override the warning about password rules"
 msgstr "覆盖有关密码规则的警告"
 
-#: users/serializers.py:467
+#: users/serializers.py:471
 msgid "Staff"
 msgstr "管理员"
 
-#: users/serializers.py:468
+#: users/serializers.py:472
 msgid "Does this user have staff permissions"
 msgstr "该用户是否拥有管理员权限"
 
-#: users/serializers.py:518
+#: users/serializers.py:522
 msgid "You do not have permission to create users"
 msgstr "你没有权限创建用户"
 
-#: users/serializers.py:553
+#: users/serializers.py:557
 msgid "Your account has been created."
 msgstr "您的账户已创建。"
 
-#: users/serializers.py:555
+#: users/serializers.py:559
 msgid "Please use the password reset function to login"
 msgstr "请使用密码重置功能登录"
 
-#: users/serializers.py:561
+#: users/serializers.py:565
 msgid "Welcome to InvenTree"
 msgstr "欢迎使用 InvenTree"
 

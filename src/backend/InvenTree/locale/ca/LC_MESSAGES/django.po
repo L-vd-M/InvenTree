@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: inventree\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-09 07:55+0000\n"
-"PO-Revision-Date: 2026-10-09 08:00\n"
+"POT-Creation-Date: 2026-10-13 06:07+0000\n"
+"PO-Revision-Date: 2026-10-13 06:11\n"
 "Last-Translator: \n"
 "Language-Team: Catalan\n"
 "Language: ca_ES\n"
@@ -603,13 +603,13 @@ msgstr "Estat de la comanda"
 msgid "Parent Build"
 msgstr "Ordre de producció pare"
 
-#: build/api.py:87 build/api.py:1070 order/api.py:541 order/api.py:781
+#: build/api.py:87 build/api.py:1084 order/api.py:541 order/api.py:781
 #: order/api.py:1258 order/api.py:1572 order/api.py:1889 order/api.py:2099
 #: stock/api.py:646
 msgid "Include Variants"
 msgstr "Inclou les variants"
 
-#: build/api.py:103 build/api.py:490 build/api.py:1084 build/models.py:293
+#: build/api.py:103 build/api.py:490 build/api.py:1098 build/models.py:293
 #: build/serializers.py:1207 build/serializers.py:1383
 #: build/serializers.py:1476 company/models.py:1038 company/serializers.py:475
 #: order/api.py:326 order/api.py:330 order/api.py:938 order/api.py:1271
@@ -746,7 +746,7 @@ msgstr "Comanda pendent"
 msgid "Allocated"
 msgstr "Assignat"
 
-#: build/api.py:530 build/models.py:2236 build/serializers.py:1436
+#: build/api.py:530 build/models.py:2266 build/serializers.py:1436
 msgid "Consumed"
 msgstr "Consumit"
 
@@ -767,14 +767,14 @@ msgstr "En comanda"
 msgid "Build not found"
 msgstr "No s'ha trobat l'ordre de producció"
 
-#: build/api.py:1107 build/models.py:130 order/models.py:2389
+#: build/api.py:1121 build/models.py:130 order/models.py:2389
 #: report/templates/report/inventree_build_order_report.html:104
 #: stock/serializers.py:98 templates/email/build_order_completed.html:16
 #: templates/email/overdue_build_order.html:15
 msgid "Build Order"
 msgstr "Ordre de producció"
 
-#: build/api.py:1121 build/api.py:1125 build/serializers.py:419
+#: build/api.py:1135 build/api.py:1139 build/serializers.py:419
 #: build/serializers.py:525 build/serializers.py:576 build/serializers.py:1257
 #: build/serializers.py:1263 order/api.py:1318 order/api.py:1323
 #: order/api.py:2151 order/api.py:2156 order/serializers.py:851
@@ -788,11 +788,11 @@ msgstr "Ordre de producció"
 msgid "Location"
 msgstr "Ubicació"
 
-#: build/api.py:1133 part/serializers.py:1378
+#: build/api.py:1147 part/serializers.py:1378
 msgid "Output"
 msgstr "Resultat"
 
-#: build/api.py:1135
+#: build/api.py:1149
 msgid "Filter by output stock item ID. Use 'null' to find uninstalled build items."
 msgstr "Filtra per l'ID de l'article d'estoc del resultat. Useu 'null' per a trobar els elements de producció no instal·lats."
 
@@ -996,35 +996,35 @@ msgstr "Codi de projecte"
 msgid "Project code for this build order"
 msgstr "Codi de projecte d'aquesta ordre de producció"
 
-#: build/models.py:998
+#: build/models.py:1028
 msgid "Cannot complete build order with open child builds"
 msgstr "No es pot completar l'ordre de producció amb ordres de producció filles obertes"
 
-#: build/models.py:1003
+#: build/models.py:1033
 msgid "Cannot complete build order with incomplete outputs"
 msgstr "No es pot completar l'ordre de producció amb resultats incomplets"
 
-#: build/models.py:1144
+#: build/models.py:1174
 msgid "Serial numbers must be provided for trackable parts"
 msgstr "Cal proporcionar números de sèrie per a les peces rastrejables"
 
-#: build/models.py:1236 build/models.py:1322
+#: build/models.py:1266 build/models.py:1352
 msgid "No build output specified"
 msgstr "No s'ha especificat cap resultat de producció"
 
-#: build/models.py:1239
+#: build/models.py:1269
 msgid "Build output is already completed"
 msgstr "El resultat de producció ja està completat"
 
-#: build/models.py:1242 build/models.py:1331 build/models.py:1409
+#: build/models.py:1272 build/models.py:1361 build/models.py:1439
 msgid "Build output does not match Build Order"
 msgstr "El resultat de producció no coincideix amb l'ordre de producció"
 
-#: build/models.py:1328 build/models.py:1406
+#: build/models.py:1358 build/models.py:1436
 msgid "Build output has already been completed"
 msgstr "El resultat de producció ja s'ha completat"
 
-#: build/models.py:1338 build/models.py:1439 build/serializers.py:328
+#: build/models.py:1368 build/models.py:1469 build/serializers.py:328
 #: build/serializers.py:382 build/serializers.py:925 build/serializers.py:1732
 #: order/models.py:820 order/serializers.py:627 order/serializers.py:862
 #: part/models.py:3879 stock/models.py:1079 stock/models.py:1504
@@ -1034,43 +1034,43 @@ msgstr "El resultat de producció ja s'ha completat"
 msgid "Quantity must be greater than zero"
 msgstr "La quantitat ha de ser més gran que zero"
 
-#: build/models.py:1342 build/models.py:1444 build/serializers.py:333
+#: build/models.py:1372 build/models.py:1474 build/serializers.py:333
 msgid "Quantity cannot be greater than the output quantity"
 msgstr "La quantitat no pot ser més gran que la quantitat del resultat"
 
-#: build/models.py:1418
+#: build/models.py:1448
 msgid "Build output has not passed all required tests"
 msgstr "El resultat de producció no ha superat totes les proves obligatòries"
 
-#: build/models.py:1426
+#: build/models.py:1456
 msgid "Allocated stock items are still in production"
 msgstr "Els articles d'estoc assignats encara estan en producció"
 
-#: build/models.py:1433
+#: build/models.py:1463
 msgid "Cannot partially complete a build output with allocated items"
 msgstr "No es pot completar parcialment un resultat de producció amb elements assignats"
 
-#: build/models.py:1616 order/models.py:4232 order/serializers.py:1999
+#: build/models.py:1646 order/models.py:4232 order/serializers.py:1999
 #: order/serializers.py:2852 stock/models.py:1494 stock/models.py:1898
 #: stock/models.py:2121 stock/models.py:2444 stock/models.py:2738
 msgid "Stock item no longer exists"
 msgstr "L'article d'estoc ja no existeix"
 
-#: build/models.py:1634 build/serializers.py:973 order/serializers.py:1777
+#: build/models.py:1664 build/serializers.py:973 order/serializers.py:1777
 #: order/serializers.py:2808
 #, python-brace-format
 msgid "Available quantity ({q}) exceeded"
 msgstr "S'ha superat la quantitat disponible ({q})"
 
-#: build/models.py:2190
+#: build/models.py:2220
 msgid "Build Order Line Item"
 msgstr "Línia de l'ordre de producció"
 
-#: build/models.py:2215
+#: build/models.py:2245
 msgid "Build object"
 msgstr "Objecte de producció"
 
-#: build/models.py:2227 build/models.py:2507 build/serializers.py:314
+#: build/models.py:2257 build/models.py:2537 build/serializers.py:314
 #: build/serializers.py:367 build/serializers.py:1435 common/models.py:1394
 #: order/models.py:2135 order/models.py:3209 order/models.py:4199
 #: order/serializers.py:1886 order/serializers.py:2390
@@ -1094,40 +1094,40 @@ msgstr "Objecte de producció"
 msgid "Quantity"
 msgstr "Quantitat"
 
-#: build/models.py:2228
+#: build/models.py:2258
 msgid "Required quantity for build order"
 msgstr "Quantitat necessària per a l'ordre de producció"
 
-#: build/models.py:2237
+#: build/models.py:2267
 msgid "Quantity of consumed stock"
 msgstr "Quantitat d'estoc consumit"
 
-#: build/models.py:2338
+#: build/models.py:2368
 msgid "Build item must specify a build output, as master part is marked as trackable"
 msgstr "L'element de producció ha d'especificar un resultat de producció, ja que la peça principal està marcada com a rastrejable"
 
-#: build/models.py:2401 build/serializers.py:956
+#: build/models.py:2431 build/serializers.py:956
 msgid "Selected stock item does not match BOM line"
 msgstr "L'article d'estoc seleccionat no coincideix amb la línia de la BOM"
 
-#: build/models.py:2420
+#: build/models.py:2450
 msgid "Allocated quantity must be greater than zero"
 msgstr "La quantitat assignada ha de ser més gran que zero"
 
-#: build/models.py:2426
+#: build/models.py:2456
 msgid "Quantity must be 1 for serialized stock"
 msgstr "La quantitat ha de ser 1 per a l'estoc serialitzat"
 
-#: build/models.py:2436
+#: build/models.py:2466
 #, python-brace-format
 msgid "Allocated quantity ({q}) must not exceed available stock quantity ({a})"
 msgstr "La quantitat assignada ({q}) no pot superar la quantitat d'estoc disponible ({a})"
 
-#: build/models.py:2453 order/models.py:3158 order/models.py:4163
+#: build/models.py:2483 order/models.py:3158 order/models.py:4163
 msgid "Stock item is over-allocated"
 msgstr "L'article d'estoc està sobreassignat"
 
-#: build/models.py:2497 build/serializers.py:908 build/serializers.py:1224
+#: build/models.py:2527 build/serializers.py:908 build/serializers.py:1224
 #: order/serializers.py:1714 order/serializers.py:1735
 #: order/serializers.py:2754 order/serializers.py:2775
 #: report/templates/report/inventree_sales_order_shipment_report.html:28
@@ -1136,19 +1136,19 @@ msgstr "L'article d'estoc està sobreassignat"
 msgid "Stock Item"
 msgstr "Article d'estoc"
 
-#: build/models.py:2498
+#: build/models.py:2528
 msgid "Source stock item"
 msgstr "Article d'estoc d'origen"
 
-#: build/models.py:2508
+#: build/models.py:2538
 msgid "Stock quantity to allocate to build"
 msgstr "Quantitat d'estoc a assignar a la producció"
 
-#: build/models.py:2517
+#: build/models.py:2547
 msgid "Install into"
 msgstr "Instal·la a"
 
-#: build/models.py:2518
+#: build/models.py:2548
 msgid "Destination stock item"
 msgstr "Article d'estoc de destinació"
 
@@ -1575,29 +1575,29 @@ msgstr "Cancel·lat"
 msgid "Complete"
 msgstr "Completat"
 
-#: build/tasks.py:370
+#: build/tasks.py:381
 #, python-brace-format
 msgid "Build order {build} has been completed"
 msgstr "S'ha completat l'ordre de producció {build}"
 
-#: build/tasks.py:376
+#: build/tasks.py:387
 msgid "A build order has been completed"
 msgstr "S'ha completat una ordre de producció"
 
-#: build/tasks.py:507
+#: build/tasks.py:518
 msgid "Stock required for build order"
 msgstr "Estoc necessari per a l'ordre de producció"
 
-#: build/tasks.py:517
+#: build/tasks.py:528
 #, python-brace-format
 msgid "Build order {build} requires additional stock"
 msgstr "L'ordre de producció {build} necessita estoc addicional"
 
-#: build/tasks.py:541
+#: build/tasks.py:552
 msgid "Overdue Build Order"
 msgstr "Ordre de producció vençuda"
 
-#: build/tasks.py:546
+#: build/tasks.py:557
 #, python-brace-format
 msgid "Build order {bo} is now overdue"
 msgstr "L'ordre de producció {bo} ha vençut"
@@ -1746,7 +1746,7 @@ msgstr "Descripció del projecte"
 #: common/models.py:2609 company/models.py:194 company/models.py:787
 #: machine/models.py:43 part/models.py:1310 plugin/models.py:69
 #: stock/api.py:715 users/models.py:381 users/models.py:749
-#: users/serializers.py:360 users/serializers.py:481
+#: users/serializers.py:364 users/serializers.py:485
 msgid "Active"
 msgstr "Actiu"
 
@@ -4404,66 +4404,74 @@ msgid "Show the current page in breadcrumbs"
 msgstr "Mostra la pàgina actual a la ruta de navegació"
 
 #: common/setting/user.py:259
+msgid "Pin Navigation Tree"
+msgstr ""
+
+#: common/setting/user.py:260
+msgid "Display navigation tree permanently"
+msgstr ""
+
+#: common/setting/user.py:265
 msgid "Show Extra Model Information"
 msgstr "Mostra informació addicional del model"
 
-#: common/setting/user.py:260
+#: common/setting/user.py:266
 msgid "Display extra information in model selection dropdowns"
 msgstr "Mostra informació addicional als desplegables de selecció de model"
 
-#: common/setting/user.py:265
+#: common/setting/user.py:271
 msgid "Show full stock location in tables"
 msgstr "Mostra la ubicació d'estoc completa a les taules"
 
-#: common/setting/user.py:267
+#: common/setting/user.py:273
 msgid "Disabled: The full location path is displayed as a hover tooltip. Enabled: The full location path is displayed as plain text."
 msgstr "Desactivat: el camí complet de la ubicació es mostra com a indicador de funció en passar-hi el cursor. Activat: el camí complet de la ubicació es mostra com a text sense format."
 
-#: common/setting/user.py:273
+#: common/setting/user.py:279
 msgid "Show full part categories in tables"
 msgstr "Mostra les categories de peces completes a les taules"
 
-#: common/setting/user.py:275
+#: common/setting/user.py:281
 msgid "Disabled: The full category path is displayed as a hover tooltip. Enabled: The full category path is displayed as plain text."
 msgstr "Desactivat: el camí complet de la categoria es mostra com a indicador de funció en passar-hi el cursor. Activat: el camí complet de la categoria es mostra com a text sense format."
 
-#: common/setting/user.py:281
+#: common/setting/user.py:287
 msgid "Show Subassemblies in BOM table"
 msgstr "Mostra els subconjunts a la taula BOM"
 
-#: common/setting/user.py:282
+#: common/setting/user.py:288
 msgid "Enable display of subassemblies in the BOM table"
 msgstr "Activa la visualització dels subconjunts a la taula BOM"
 
-#: common/setting/user.py:287
+#: common/setting/user.py:293
 msgid "Receive error reports"
 msgstr "Rep informes d'error"
 
-#: common/setting/user.py:288
+#: common/setting/user.py:294
 msgid "Receive notifications for system errors"
 msgstr "Rep notificacions dels errors del sistema"
 
-#: common/setting/user.py:293
+#: common/setting/user.py:299
 msgid "Last used printing machines"
 msgstr "Últimes màquines d'impressió utilitzades"
 
-#: common/setting/user.py:294
+#: common/setting/user.py:300
 msgid "Save the last used printing machines for a user"
 msgstr "Desa les últimes màquines d'impressió utilitzades per un usuari"
 
-#: common/setting/user.py:298
+#: common/setting/user.py:304
 msgid "Display Items at Final Level"
 msgstr "Mostra els elements a l'últim nivell"
 
-#: common/setting/user.py:300
+#: common/setting/user.py:306
 msgid "Automatically default to showing items/parts instead of sub-levels for locations or categories with no children"
 msgstr "Mostra automàticament els elements/peces en lloc dels subnivells per a les ubicacions o categories sense fills"
 
-#: common/setting/user.py:306
+#: common/setting/user.py:312
 msgid "Enable Filtered Detail Navigation"
 msgstr "Activa la navegació de detalls filtrada"
 
-#: common/setting/user.py:308
+#: common/setting/user.py:314
 msgid "Enable persisting of filtered detail navigation parameters to the view url"
 msgstr "Activa la persistència dels paràmetres de navegació de detalls filtrada a l'URL de la vista"
 
@@ -5197,7 +5205,7 @@ msgstr "Nombre de còpies que s'han d'imprimir de cada etiqueta"
 msgid "Connected"
 msgstr "Connectada"
 
-#: machine/machine_types/label_printer.py:236 order/api.py:2529
+#: machine/machine_types/label_printer.py:236 order/api.py:2527
 msgid "Unknown"
 msgstr "Desconegut"
 
@@ -5444,14 +5452,14 @@ msgstr "No s'ha trobat l'ordre de devolució"
 msgid "Transfer order not found"
 msgstr "No s'ha trobat l'ordre de transferència"
 
-#: order/api.py:2521 order/models.py:657 order/models.py:2338
+#: order/api.py:2519 order/models.py:657 order/models.py:2338
 #: order/models.py:2464
 #: report/templates/report/inventree_purchase_order_report.html:13
 #: stock/serializers.py:134 templates/email/overdue_purchase_order.html:15
 msgid "Purchase Order"
 msgstr "Comanda de compra"
 
-#: order/api.py:2523 order/models.py:1397 order/models.py:2516
+#: order/api.py:2521 order/models.py:1397 order/models.py:2516
 #: order/models.py:2697 order/models.py:3086
 #: report/templates/report/inventree_build_order_report.html:134
 #: report/templates/report/inventree_sales_order_report.html:13
@@ -5460,14 +5468,14 @@ msgstr "Comanda de compra"
 msgid "Sales Order"
 msgstr "Comanda de venda"
 
-#: order/api.py:2525 order/models.py:3252 order/models.py:3604
+#: order/api.py:2523 order/models.py:3252 order/models.py:3604
 #: order/models.py:3670
 #: report/templates/report/inventree_return_order_report.html:12
 #: templates/email/overdue_return_order.html:15
 msgid "Return Order"
 msgstr "Ordre de devolució"
 
-#: order/api.py:2527 order/models.py:3692 order/models.py:4037
+#: order/api.py:2525 order/models.py:3692 order/models.py:4037
 #: report/templates/report/inventree_transfer_order_report.html:11
 msgid "Transfer Order"
 msgstr "Ordre de transferència"
@@ -8588,17 +8596,17 @@ msgstr "Connector"
 msgid "No author found"
 msgstr "No s'ha trobat cap autor"
 
-#: plugin/registry.py:869
+#: plugin/registry.py:875
 #, python-brace-format
 msgid "Plugin '{p}' is not compatible with the current InvenTree version {v}"
 msgstr "El connector '{p}' no és compatible amb la versió actual d'InvenTree {v}"
 
-#: plugin/registry.py:872
+#: plugin/registry.py:878
 #, python-brace-format
 msgid "Plugin requires at least version {v}"
 msgstr "El connector requereix com a mínim la versió {v}"
 
-#: plugin/registry.py:874
+#: plugin/registry.py:880
 #, python-brace-format
 msgid "Plugin requires at most version {v}"
 msgstr "El connector requereix com a màxim la versió {v}"
@@ -9157,31 +9165,31 @@ msgstr "Sense resultat"
 msgid "Transferred"
 msgstr "Transferit"
 
-#: report/templatetags/report.py:252
+#: report/templatetags/report.py:254
 msgid "Invalid media file path"
 msgstr "Camí del fitxer multimèdia no vàlid"
 
-#: report/templatetags/report.py:271
+#: report/templatetags/report.py:273
 msgid "Invalid static file path"
 msgstr "Camí del fitxer estàtic no vàlid"
 
-#: report/templatetags/report.py:373
+#: report/templatetags/report.py:375
 msgid "Asset file not found"
 msgstr "No s'ha trobat el fitxer de recurs"
 
-#: report/templatetags/report.py:434 report/templatetags/report.py:560
+#: report/templatetags/report.py:436 report/templatetags/report.py:562
 msgid "Image file not found"
 msgstr "No s'ha trobat el fitxer d'imatge"
 
-#: report/templatetags/report.py:524
+#: report/templatetags/report.py:526
 msgid "No image file specified"
 msgstr "No s'ha especificat cap fitxer d'imatge"
 
-#: report/templatetags/report.py:554
+#: report/templatetags/report.py:556
 msgid "part_image tag requires a Part instance"
 msgstr "L'etiqueta part_image requereix una instància de peça"
 
-#: report/templatetags/report.py:734
+#: report/templatetags/report.py:736
 msgid "company_image tag requires a Company instance"
 msgstr "L'etiqueta company_image requereix una instància d'empresa"
 
@@ -10410,23 +10418,23 @@ msgstr "Dies fins a la caducitat"
 msgid "You are receiving this email because you are subscribed to notifications for these parts"
 msgstr "Rebeu aquest correu electrònic perquè esteu subscrit a les notificacions d'aquestes peces"
 
-#: users/admin.py:109
+#: users/admin.py:112
 msgid "Users"
 msgstr "Usuaris"
 
-#: users/admin.py:110
+#: users/admin.py:113
 msgid "Select which users are assigned to this group"
 msgstr "Seleccioneu quins usuaris estan assignats a aquest grup"
 
-#: users/admin.py:144
+#: users/admin.py:147
 msgid "Personal info"
 msgstr "Informació personal"
 
-#: users/admin.py:146
+#: users/admin.py:149
 msgid "Permissions"
 msgstr "Permisos"
 
-#: users/admin.py:149
+#: users/admin.py:152
 msgid "Important dates"
 msgstr "Dates importants"
 
@@ -10698,67 +10706,67 @@ msgstr "L'usuari ha d'estar autenticat"
 msgid "Only a superuser can create a token for another user"
 msgstr "Només un superusuari pot crear un token per a un altre usuari"
 
-#: users/serializers.py:350
+#: users/serializers.py:354
 msgid "Administrator"
 msgstr "Administrador"
 
-#: users/serializers.py:351
+#: users/serializers.py:355
 msgid "Does this user have administrative permissions"
 msgstr "Indica si aquest usuari té permisos d'administració"
 
-#: users/serializers.py:356 users/serializers.py:474
+#: users/serializers.py:360 users/serializers.py:478
 msgid "Superuser"
 msgstr "Superusuari"
 
-#: users/serializers.py:356 users/serializers.py:475
+#: users/serializers.py:360 users/serializers.py:479
 msgid "Is this user a superuser"
 msgstr "Indica si aquest usuari és un superusuari"
 
-#: users/serializers.py:360 users/serializers.py:482
+#: users/serializers.py:364 users/serializers.py:486
 msgid "Is this user account active"
 msgstr "Indica si aquest compte d'usuari està actiu"
 
-#: users/serializers.py:372
+#: users/serializers.py:376
 msgid "Only a superuser can adjust this field"
 msgstr "Només un superusuari pot modificar aquest camp"
 
-#: users/serializers.py:400
+#: users/serializers.py:404
 msgid "Password"
 msgstr "Contrasenya"
 
-#: users/serializers.py:401
+#: users/serializers.py:405
 msgid "Password for the user"
 msgstr "Contrasenya de l'usuari"
 
-#: users/serializers.py:407
+#: users/serializers.py:411
 msgid "Override warning"
 msgstr "Ignora l'avís"
 
-#: users/serializers.py:408
+#: users/serializers.py:412
 msgid "Override the warning about password rules"
 msgstr "Ignora l'avís sobre les regles de contrasenya"
 
-#: users/serializers.py:467
+#: users/serializers.py:471
 msgid "Staff"
 msgstr "Personal"
 
-#: users/serializers.py:468
+#: users/serializers.py:472
 msgid "Does this user have staff permissions"
 msgstr "Indica si aquest usuari té permisos de personal"
 
-#: users/serializers.py:518
+#: users/serializers.py:522
 msgid "You do not have permission to create users"
 msgstr "No teniu permís per a crear usuaris"
 
-#: users/serializers.py:553
+#: users/serializers.py:557
 msgid "Your account has been created."
 msgstr "S'ha creat el vostre compte."
 
-#: users/serializers.py:555
+#: users/serializers.py:559
 msgid "Please use the password reset function to login"
 msgstr "Utilitzeu la funció de restabliment de la contrasenya per a iniciar la sessió"
 
-#: users/serializers.py:561
+#: users/serializers.py:565
 msgid "Welcome to InvenTree"
 msgstr "Us donem la benvinguda a InvenTree"
 
