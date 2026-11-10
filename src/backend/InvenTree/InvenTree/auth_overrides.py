@@ -149,7 +149,10 @@ class RegistrationMixin:
 
     def save_user(self, request, user, form, commit=True):
         """Check if a default group is set in settings."""
-        user._is_registering = True  # marker for email synchronization
+        # The social adapter passes a SocialLogin here, not a User: mark the real user, otherwise the
+        # email-sync signal creates the EmailAddress first and allauth's setup_user_email() asserts (HTTP 500)
+        target = getattr(user, 'user', user)
+        target._is_registering = True  # marker for email synchronization
         # Create the user
         user = super().save_user(request, user, form)
 
