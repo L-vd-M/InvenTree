@@ -15,6 +15,8 @@ from decimal import ROUND_HALF_UP, Decimal
 
 _CROCKFORD = '0123456789ABCDEFGHJKMNPQRSTVWXYZ'
 
+DEFAULT_CURRENCY = 'ZAR'  # codespell:ignore zar
+UNASSIGNED = 'unassigned'
 BACKOFF_BASE_SECONDS = 30
 BACKOFF_CAP_SECONDS = 6 * 3600
 GIVE_UP_AFTER_SECONDS = 72 * 3600
@@ -94,8 +96,8 @@ def envelope(
     }
 
 
-def minor_units(amount, currency: str = 'ZAR') -> int:
-    """Integer minor units (2 decimals for ZAR/USD/EUR); never floats."""
+def minor_units(amount, currency: str = DEFAULT_CURRENCY) -> int:
+    """Integer minor units (two decimals for every supported currency); never floats."""
     amount = getattr(amount, 'amount', amount)  # djmoney Money -> Decimal
     return int(
         (Decimal(str(amount)) * 100).quantize(Decimal(1), rounding=ROUND_HALF_UP)
@@ -108,6 +110,26 @@ def money(amount, currency) -> dict | None:
         return None
     amount = getattr(amount, 'amount', amount)
     return {'amount_minor': minor_units(amount, currency), 'currency': str(currency)}
+
+
+def line_total(quantity, unit_price, currency) -> dict | None:
+    """Quantity times the unit cost in minor units (as published), rounded half up; None without a price."""
+    unit_cost = money(unit_price, currency)
+    if unit_cost is None:
+        return None
+    amount = (Decimal(str(quantity)) * unit_cost['amount_minor']).quantize(
+        Decimal(1), rounding=ROUND_HALF_UP
+    )
+    return {'amount_minor': int(amount), 'currency': unit_cost['currency']}
+
+
+def cost_block(quantity, unit_price, currency) -> tuple[dict, dict, bool]:
+    """Return (unit_cost, total, priced). Without a price both are 0 in the default currency and priced is False."""
+    unit_price = getattr(unit_price, 'amount', unit_price)
+    if unit_price is None or not currency:
+        zero = {'amount_minor': 0, 'currency': DEFAULT_CURRENCY}
+        return zero, dict(zero), False
+    return money(unit_price, currency), line_total(quantity, unit_price, currency), True
 
 
 def dec_str(value) -> str:
@@ -158,7 +180,16 @@ def build_stock_received(
         'stock.received',
         tenant,
         {'kind': 'purchase_order', 'id': po_reference, 'ref': str(po_pk)},
-        {'purchase_order': po_reference, 'supplier': supplier, 'lines': lines},
+        {
+            'purchase_order': po_reference,
+            'supplier': supplier or 'unknown',
+            'lines': lines,
+            'total': {
+                'amount_minor': sum(ln['total']['amount_minor'] for ln in lines),
+                'currency': lines[0]['total']['currency'],
+            },
+            'mixed_currency': len({ln['total']['currency'] for ln in lines}) > 1,
+        },
         occurred_at,
     )
 
@@ -173,6 +204,9 @@ def build_stock_adjusted(
     tracking_id: int,
     location: str | None = None,
     occurred_at: datetime | None = None,
+    unit_cost: dict | None = None,
+    total: dict | None = None,
+    priced: bool = False,
 ) -> dict:
     """Build a stock.adjusted event."""
     return envelope(
@@ -185,7 +219,10 @@ def build_stock_adjusted(
             'reason': reason,
             'quantity_after': dec_str(quantity_after),
             'tracking_id': tracking_id,
-            'location': location,
+            'location': location or UNASSIGNED,
+            'unit_cost': unit_cost,
+            'total': total,
+            'priced': priced,
         },
         occurred_at,
     )

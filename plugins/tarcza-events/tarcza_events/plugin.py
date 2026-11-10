@@ -123,16 +123,21 @@ class TarczaEventsPlugin(EventMixin, ScheduleMixin, SettingsMixin, InvenTreePlug
             .select_related('part', 'supplier_part', 'location')
             .order_by('pk')
         ):
+            cost = core.cost_block(
+                item.quantity, item.purchase_price, item.purchase_price_currency
+            )
             lines.append({
                 'stock_item': item.pk,
                 'part_ref': item.part.IPN or str(item.part.pk),
                 'part_name': item.part.name,
                 'quantity': core.dec_str(item.quantity),
-                'unit_cost': core.money(
-                    item.purchase_price, item.purchase_price_currency
-                ),
+                'unit_cost': cost[0],
+                'total': cost[1],
+                'priced': cost[2],
                 'supplier_sku': item.supplier_part.SKU if item.supplier_part else None,
-                'location': item.location.pathstring if item.location else None,
+                'location': item.location.pathstring
+                if item.location
+                else core.UNASSIGNED,
             })
         if not lines:
             return None, None
@@ -204,6 +209,9 @@ class TarczaEventsPlugin(EventMixin, ScheduleMixin, SettingsMixin, InvenTreePlug
             )
             delta = after - before
         part = tr.part or tr.item.part
+        cost = core.cost_block(
+            delta, tr.item.purchase_price, tr.item.purchase_price_currency
+        )
         return core.build_stock_adjusted(
             self.tenant(),
             tr.item.pk,
@@ -214,6 +222,7 @@ class TarczaEventsPlugin(EventMixin, ScheduleMixin, SettingsMixin, InvenTreePlug
             tr.pk,
             tr.item.location.pathstring if tr.item.location else None,
             tr.date,
+            *cost,
         )
 
     def _part_created(self, kw):
@@ -238,8 +247,13 @@ class TarczaEventsPlugin(EventMixin, ScheduleMixin, SettingsMixin, InvenTreePlug
 
     def deliver_outbox(self, *args, **kwargs):
         """Scheduled task: sweep stock history, then deliver due outbox rows."""
-        with transaction.atomic():
-            self.sweep_adjustments()
+        try:
+            with transaction.atomic():
+                self.sweep_adjustments()
+        except (
+            Exception
+        ):  # a failing sweep must never block delivery of what is already in the outbox
+            logger.exception('tarcza-events: adjustment sweep failed')
         url, secret = self.consumer_url(), self.secret()
         if not url or not secret:
             return {'skipped': 'consumer url or secret not configured'}
